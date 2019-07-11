@@ -97,8 +97,8 @@ else
 fi
 echo "Configuring DHCP server .."
 
-cat > "/etc/dhcpd.conf" <<EOF
-option domain-name-servers 8.8.8.8, 8.8.4.4;
+cat > "/etc/dhcp/dhcpd.conf" <<EOF
+option domain-name-servers 1.1.1.1 1.0.0.1;
 option subnet-mask 255.255.255.0;
 option routers ${AP_ADDR};
 subnet ${SUBNET} netmask 255.255.255.0 {
